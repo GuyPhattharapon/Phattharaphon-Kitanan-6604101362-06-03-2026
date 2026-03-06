@@ -7,8 +7,15 @@ import axios from 'axios'
 // good idea to move this instance creation inside of the
 // "export default () => {}" function below (which runs individually
 // for each client)
-const rawBaseUrl = process.env.API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api'
-const finalBaseUrl = rawBaseUrl.endsWith('/api') ? rawBaseUrl : (rawBaseUrl.endsWith('/') ? `${rawBaseUrl}api` : `${rawBaseUrl}/api`)
+const rawBaseUrl =
+  process.env.API_URL ||
+  process.env.VITE_API_BASE_URL ||
+  process.env.VITE_API_URL ||
+  'http://localhost:3000/api'
+
+const finalBaseUrl = rawBaseUrl.endsWith('/api')
+  ? rawBaseUrl
+  : (rawBaseUrl.endsWith('/') ? `${rawBaseUrl}api` : `${rawBaseUrl}/api`)
 
 const api = axios.create({
   baseURL: finalBaseUrl
