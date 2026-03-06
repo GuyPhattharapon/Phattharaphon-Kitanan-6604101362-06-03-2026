@@ -55,6 +55,11 @@ app.get('/', (_req, res) => {
 // Task API (Lab 2.1)
 app.use('/api/tasks', taskRoutes);
 
+// ✅ Health Check
+app.get("/api/health", (req, res) => {
+  res.json({ ok: true });
+});
+
 // ✅ fallback 404 สำหรับทุก route ที่ไม่ match
 app.use((req, res) => {
   res.status(404).json({
