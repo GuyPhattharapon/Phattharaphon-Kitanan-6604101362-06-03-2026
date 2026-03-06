@@ -1,0 +1,11 @@
+{
+    "student_id": "6604101362",
+    "name": "นายภัทรพล กิตอนันต์",
+    "github_repo": "https://github.com/GuyPhattharapon/Phattharaphon-Kitanan-6604101362-06-03-2026",
+    "backend_base_url": "https://phattharaphon-kitanan-6604101362-06-03.onrender.com",
+    "frontend_url": "https://finalphattharapon362.netlify.app",
+    "api": {
+        "health": "https://phattharaphon-kitanan-6604101362-06-03.onrender.com/api/health",
+        "tasks": "https://phattharaphon-kitanan-6604101362-06-03.onrender.com/api/tasks"
+    }
+}
